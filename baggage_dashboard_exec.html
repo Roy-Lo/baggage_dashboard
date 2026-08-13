@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星宇航空 · 行李營運一頁式高層摘要 2026 JAN–JUL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F3EF; --panel:#FDFCF9; --panel2:#EFEDE8;
+  --line:#E3DED6; --line2:#CFC7BB;
+  --txt:#3B3838; --muted:#635E58; --faint:#A39C93; --prose:#4A4642;
+  --gold:#836250; --gold-dim:#A98D71; --navy:#295773; --alert:#C55A11;
+  --amber:#8A6A3C; --good:#5F7A6B; --obsidian:#33302D;
+  --disp:'Noto Sans TC','Microsoft JhengHei',sans-serif;
+  --body:Carlito,Calibri,'Noto Sans TC','Microsoft JhengHei',sans-serif;
+  --mono:Consolas,'Courier New',monospace;
+  --r:12px; --r-sm:8px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--txt);
+     font-family:var(--body);font-size:15px;line-height:1.75;
+     -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{max-width:1040px;margin:0 auto;padding:34px 30px 44px}
+
+/* ── 頁首 ── */
+.hd{border-bottom:2px solid var(--gold);padding-bottom:16px;margin-bottom:22px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--faint)}
+.hd h1{font-family:var(--disp);font-size:30px;font-weight:900;margin:6px 0 4px;color:var(--gold);letter-spacing:-.01em}
+.hd h1 .jx{color:var(--navy)}
+.hd .meta{font-size:13.5px;color:var(--muted);margin:0}
+.hd .meta b{color:var(--txt)}
+
+/* ── KPI ── */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+     padding:16px 15px 14px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;
+            background:linear-gradient(90deg,var(--gold),var(--gold-dim))}
+.kpi.hot::after{background:linear-gradient(90deg,var(--alert),#E08A4C)}
+.kpi .lab{font-size:12.5px;letter-spacing:.05em;color:var(--muted);font-weight:500;line-height:1.45}
+.kpi .val{font-family:var(--mono);font-size:29px;font-weight:700;margin-top:7px;line-height:1.05;color:var(--obsidian)}
+.kpi.hot .val{color:var(--alert)}
+.kpi .val small{font-size:12px;color:var(--muted);font-weight:400;font-family:var(--body)}
+.kpi .meta{font-size:11.5px;color:var(--faint);margin-top:7px;font-family:var(--mono);line-height:1.55}
+
+/* ── 區塊 ── */
+h2.sec{font-family:var(--disp);font-size:17px;font-weight:700;color:var(--gold);
+       margin:0 0 12px;display:flex;align-items:center;gap:9px}
+h2.sec::before{content:"";width:4px;height:17px;background:var(--gold);border-radius:2px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 17px}
+.card.c1{border-top:3px solid var(--navy)}
+.card.c2{border-top:3px solid var(--amber)}
+.card.c3{border-top:3px solid var(--alert)}
+.card h3{font-family:var(--disp);font-size:14.5px;font-weight:700;margin:0 0 9px;color:var(--obsidian)}
+.card ul{margin:0;padding-left:17px}
+.card li{font-size:13.5px;line-height:1.8;color:var(--prose);margin-bottom:7px}
+.card li:last-child{margin-bottom:0}
+.card b{color:var(--obsidian)}
+.card b.hot{color:var(--alert)}
+.card b.warn{color:var(--amber)}
+
+/* ── 建議方向 ── */
+.acts{display:grid;gap:11px;margin-bottom:22px}
+.act{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);
+     border-radius:var(--r-sm);padding:14px 17px;display:flex;gap:14px;align-items:flex-start}
+.act .no{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--gold-dim);flex:none;line-height:1.3}
+.act .bd{min-width:0;flex:1}
+.act h4{font-family:var(--disp);font-size:14.5px;font-weight:700;margin:0 0 5px;color:var(--obsidian)}
+.act p{margin:0;font-size:13.5px;line-height:1.8;color:var(--prose)}
+.act .tgt{margin-top:7px;font-size:12.5px;color:var(--muted);font-family:var(--mono);
+          background:var(--panel2);border-radius:5px;padding:6px 10px;line-height:1.6}
+.act .tgt b{color:var(--gold)}
+
+/* ── 頁尾 ── */
+.ft{border-top:1px solid var(--line2);padding-top:13px;font-size:11.5px;
+    color:var(--faint);font-family:var(--mono);line-height:1.75}
+.ft b{color:var(--muted)}
+
+/* ── 列印：A4 直式一頁 ── */
+@page{size:A4 portrait;margin:11mm}
+@media print{
+  html,body{margin:0;padding:0}
+  body{background:#fff;font-size:10px;line-height:1.55}
+  .page{max-width:none;padding:0}
+  .hd{padding-bottom:6px;margin-bottom:8px;border-bottom-width:1.5px}
+  .hd h1{font-size:18px;margin:2px 0 1px}
+  .hd .meta{font-size:9px;line-height:1.5}
+  .eyebrow{font-size:7.5px}
+  .kpis{gap:6px;margin-bottom:9px}
+  .kpi{padding:7px 9px 6px;border-radius:6px}
+  .kpi .lab{font-size:8px;line-height:1.35}
+  .kpi .val{font-size:17px;margin-top:3px}
+  .kpi .val small{font-size:8px}
+  .kpi .meta{font-size:7.4px;margin-top:3px;line-height:1.4}
+  h2.sec{font-size:11.5px;margin:0 0 5px;gap:7px}
+  h2.sec::before{height:11px;width:3px}
+  .cards{gap:6px;margin-bottom:9px}
+  .card{padding:8px 9px;border-radius:6px}
+  .card h3{font-size:10px;margin:0 0 4px}
+  .card li{font-size:8.6px;line-height:1.52;margin-bottom:2px}
+  .card ul{padding-left:12px}
+  .acts{gap:5px;margin-bottom:8px}
+  .act{padding:7px 10px;gap:8px;border-radius:5px;border-left-width:3px}
+  .act .no{font-size:12px}
+  .act h4{font-size:10px;margin:0 0 2px}
+  .act p{font-size:8.6px;line-height:1.55}
+  .act .tgt{font-size:7.8px;margin-top:3px;padding:3px 6px;line-height:1.45}
+  .ft{font-size:7.2px;padding-top:6px;line-height:1.5}
+  .page,.cards,.acts,.kpis{page-break-inside:avoid}
+  .act,.card,.kpi{page-break-inside:avoid}
+}
+@media(max-width:900px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .page{padding:24px 18px 32px}
+}
+@media(max-width:540px){
+  .kpis{grid-template-columns:1fr}
+  .kpi .val{font-size:26px}
+  .page{padding:20px 14px 26px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hd">
+    <div class="eyebrow">STARLUX · BAGGAGE OPERATIONS · EXECUTIVE ONE-PAGER</div>
+    <h1><span class="jx">JX</span> 行李營運高層摘要</h1>
+    <p class="meta">資料期間 <b>2026 年 1–7 月</b>（7 個完整月份）　·　案件 <b>8,576</b> 件　·　離站旅客 <b>3,556,420</b> 人　·　託運行李 <b>3,800,680</b> 件　·　金額依公司官方月匯率換算台幣</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="lab">JX 可控起程異常率</div>
+      <div class="val">2.19<small> ‰</small></div>
+      <div class="meta">7,780 件 ÷ 3,556,420 離站客<br>亞太基準 3.41‰</div>
+    </div>
+    <div class="kpi hot">
+      <div class="lab">美國五站是全網的</div>
+      <div class="val">3.5<small> 倍</small></div>
+      <div class="meta">7.72‰ vs 全網 2.19‰<br>占運量 6.0%、占可控案 21.2%</div>
+    </div>
+    <div class="kpi">
+      <div class="lab">已付賠償總額</div>
+      <div class="val">7,941,425<small> TWD</small></div>
+      <div class="meta">破損 6,595 件（占 76.9%）<br>破損率 1.74‰／千件行李</div>
+    </div>
+    <div class="kpi hot">
+      <div class="lab">跨航理賠已逾期呆帳</div>
+      <div class="val">876<small> USD</small></div>
+      <div class="meta">36 件超過索賠期限<br>另有收集中 US$6,862.43／246 件</div>
+    </div>
+  </div>
+
+  <h2 class="sec">執行摘要</h2>
+  <div class="cards">
+    <div class="card c1">
+      <h3>① 全網現況</h3>
+      <ul>
+        <li>異常結構<b class="hot">由破損主導</b>：破損占 <b>76.9%</b>，與全球「延誤主導、破損僅 18%」相反。</li>
+        <li>起程異常率 <b>2.19‰</b> 低於亞太基準 3.41‰，惟<b>延誤案恐未完整入庫</b>，不宜逕判優於業界。</li>
+        <li>異常率逐月 2.63 → 2.29 → 2.47 → 2.10 → 2.07 → 1.97 → 1.87（<b>-28.9%</b>）。已排除航網組合與結案延遲兩種假象，但本期<b class="warn">無對應改善專案</b>，<b>尚不可歸因為營運改善</b>。</li>
+      </ul>
+    </div>
+    <div class="card c2">
+      <h3>② 最需關注</h3>
+      <ul>
+        <li><b class="hot">美國線（率）</b>：SEA <b>10.17</b>、LAX <b>9.40</b>、SFO <b>6.48</b>‰ 居全網前三；五站僅占運量 6.0% 卻占可控案件 <b>21.2%</b>。</li>
+        <li><b>TPE（量）</b>：起程案件 <b>1,978</b> 件最大、率僅 1.28——屬母基地規模效應。</li>
+        <li><b class="warn">北美（時效）</b>：PHX 結案 <b>45.8 天</b>（56 件）、SFO 19.0、LAX 16.0，全網僅 5.2 天。</li>
+      </ul>
+    </div>
+    <div class="card c3">
+      <h3>③ 本期財務風險</h3>
+      <ul>
+        <li>跨航理賠<b class="hot">已逾期 36 件 · US$875.96</b>，超過索賠期限，恐無法向他航收回。</li>
+        <li><b class="warn">資料收集中 246 件 · US$6,862.43</b> 帳齡持續增長，須搶在期限前補件催收。</li>
+        <li>未收回合計 <b>US$7,738.39</b>。案件高度集中於少數他航夥伴，屬<b>可制度化解決</b>的問題。</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec">前三大建議方向</h2>
+  <div class="acts">
+    <div class="act">
+      <div class="no">01</div>
+      <div class="bd">
+        <h4>以「美國線起程站」為單位重整收運與配載決策</h4>
+        <p>美國五站是全網唯一可以用「一個決策改變一整群案件」的著力點。方向：逐班檢視長程返台班次的載重與實際拉下品項，釐清旅客行李相對於貨物的拉下順序，並要求拉下時回填拉下站（現行系統不記錄，事後無法追溯）。</p>
+        <div class="tgt">觀察指標：美國五站起程異常率由 <b>7.72‰</b> 降至 4.0‰ 以下</div>
+      </div>
+    </div>
+    <div class="act">
+      <div class="no">02</div>
+      <div class="bd">
+        <h4>回溯 3 月 LAX 單月暴衝事件</h4>
+        <p>LAX 3 月起程異常率飆升且成因高度集中於設備故障與艙位／重量限制，其中單一航班即占多數。這是本期最明確的單一事件訊號，也是最容易查清楚的類型。方向：調閱該月裝載紀錄與行李系統維修紀錄，確認屬單一設備故障期或常態性作業問題。</p>
+        <div class="tgt">觀察指標：兩週內得出明確結論；若屬常態性問題須另立改善案</div>
+      </div>
+    </div>
+    <div class="act">
+      <div class="no">03</div>
+      <div class="bd">
+        <h4>縮短北美理賠授權鏈</h4>
+        <p>PHX 平均結案 45.8 天、全網僅 5.2 天。結案慢不影響行李能否找回，但直接影響旅客感受與客訴升級風險，且<b>改善成本低</b>——瓶頸在授權門檻與文件往返，不需新增設備或人力。方向：盤點北美各站賠付核決層級，將小額賠付下放站級核決，並對逾時未結案者建立每週追蹤清單。</p>
+        <div class="tgt">觀察指標：北美各站平均結案天數降至 7 天以下；無單一案件超過 30 天</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <b>口徑聲明：</b>主指標為<b>起程站</b>（行李進入 JX 掌控的第一站），非旅客報案站；月份以<b>建檔月</b>歸戶，案件一經建檔即不再變動。異常率一律剔除他航交接失敗（RL 54／77）。結案天數僅計已結案案件，近期月份會因未結案案件尚未納入而偏低。<br>
+    <b>本頁為 Layer 1 摘要</b>，完整 27 區分析、逐月趨勢圖與改善效益情境試算請見 <b>baggage_dashboard.html</b>（完整版）或 <b>baggage_dashboard_public.html</b>（主管版 25 區）。所有數字由同一份來源資料現算，三個版本必然一致。<br>
+    產出日期 2026-08-11　·　STARLUX Airlines · Baggage Operations
+  </div>
+
+</div>
+</body>
+</html>
